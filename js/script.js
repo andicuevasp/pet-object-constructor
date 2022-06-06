@@ -25,7 +25,7 @@ const clover = new CreatePet("Clover", "rabbit");
 const baxter = new CreatePet("Baxter", "hamster");
 const cleo = new CreatePet("Cleo", "rat");
 const francine = new CreatePet("Francine", "turtle");
-console.log(sora, clover, baxter, cleo, francine);
+// console.log(sora, clover, baxter, cleo, francine);
 
 // clover.sleep()
 // console.log(clover);
@@ -35,3 +35,20 @@ console.log(sora, clover, baxter, cleo, francine);
 clover.isTired = 8;
 francine.isTired = 9;
 console.log(clover);
+
+const allPets = [sora, clover, baxter, cleo, francine];
+
+console.log(allPets);
+
+function showPets(petArray) {
+  pets.innerHTML = "";
+  for (let pet in petArray) {
+    let status = "ready to play!";
+    if (pet.isTired >= 7) {
+      status = "sleeping";
+    }
+    const li = document.createElement("li");
+    li.innerHTML = `<li><span>${pet.name}</span> the ${pet.species} is ${status}</li>`;
+    pets.append(li);
+  }
+}

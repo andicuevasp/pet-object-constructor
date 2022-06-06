@@ -25,9 +25,13 @@ const clover = new CreatePet("Clover", "rabbit");
 const baxter = new CreatePet("Baxter", "hamster");
 const cleo = new CreatePet("Cleo", "rat");
 const francine = new CreatePet("Francine", "turtle");
-// console.log(sora, clover, baxter, cleo, francine);
+console.log(sora, clover, baxter, cleo, francine);
 
 // clover.sleep()
 // console.log(clover);
 // baxter.play();
 // console.log(baxter)
+
+clover.isTired = 8;
+francine.isTired = 9;
+console.log(clover);

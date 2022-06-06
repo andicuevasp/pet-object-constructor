@@ -52,3 +52,6 @@ function showPets(petArray) {
     pets.append(li);
   }
 }
+statusButton.addEventListener("click", function (e) {
+  showPets(allPets);
+});
